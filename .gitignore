@@ -1,6 +1,6 @@
 *.pyc
 *.db
 *.sqlite3
-static/bower_components
+static/external
 .sass-cache
 
