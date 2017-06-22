@@ -20,6 +20,8 @@ class Status(models.Model):
     status = models.CharField(max_length=100)
     def __unicode__(self):
         return self.status
+    class Meta:
+        verbose_name_plural = "Statuses"
 
 class Proposal(models.Model):
 

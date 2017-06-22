@@ -33,7 +33,7 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right vertical-center">
                             {% if request.user.is_authenticated %}
-                            <li><a href="">{% trans "logout"%}</a></li>
+                         <li><a href="{% url 'account_logout' %}">{% trans "logout"%}</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salut {{request.user.username}} <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -47,7 +47,7 @@
 
                             </ul>
                         </div>
-                    </div><!-- /.container-fluid -->
+                    </div>
                 </nav>
             </header>
             <div class="row">
