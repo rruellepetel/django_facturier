@@ -19,9 +19,9 @@ from django.contrib.auth.views import login, logout
 from django.views.generic import TemplateView
 
 
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^profile/', include('facturier.urls')),
     url(r'^proposal/', include('facturier.urls')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^$', TemplateView.as_view(template_name="homepage.html"),name="homepage")

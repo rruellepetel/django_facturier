@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+
+{%block title%}
+
+
+
+{%endblock title%}
+
+{%block content%}
+<ul>
+    {% for profile in profiles %}
+        <li>{{profile.user.username}} {{profile.address}} {{profile.zip_Code}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

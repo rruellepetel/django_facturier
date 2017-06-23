@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+{% load i18n %}
+{%block title%}
+
+{%endblock title%}
+
+{%block content%}
+<ul>
+    {% if object.avatar %}
+    <li><img src="{{object.avatar.url}}" alt=""></li>
+    {% endif %}
+    <li><label>{% trans "Pseudo" %} : </label> {{object.user.username}}</li>
+    <li><label>{% trans "Adresse" %} : </label> {{object.address}}</li>
+    <li><label>{% trans "Code postal" %} : </label> {{object.zip_Code}}</li>
+    <li><label>{% trans "Site web" %} : </label> {{object.website}}</li>
+    <li><label>{% trans "Skills" %} : </label> {% for skill in object.skills.all %}
+        {{skill}}
+        {% endfor %}</li>
+    <li><label>{% trans "Interêts" %} : </label> {% for interest in object.interests.all %}
+            {{interest}}
+        {% endfor %}</li>
+
+    <li><label>{% trans "Ville" %} : </label> {{object.city}}</li>
+    <li><label>{% trans "Biographie" %} : </label>{{object.bio}}</li>
+</ul>
+
+{% if request.user.is_authenticated %}
+
+
+<a href="{% url 'profile-update' request.user.username %}">{% trans "Editer" %}</a>
+{% endif %}
+
+{% endblock content %}

@@ -3,8 +3,6 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
-
 class Customer(models.Model):
 
     dealer = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -14,6 +12,9 @@ class Customer(models.Model):
     last_name = models.CharField(max_length=100)
 
     email = models.CharField(max_length=100)
+    def __unicode__(self):
+        return self.email
+
 
 class Status(models.Model):
 
@@ -30,6 +31,9 @@ class Proposal(models.Model):
     status = models.ForeignKey(Status, on_delete=models.CASCADE)
 
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    def __unicode__(self):
+        return str(self.id)
+
 
 class Service(models.Model):
 
