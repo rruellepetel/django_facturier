@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from .models import Customer
+from .models import Customer, Proposal
 from django.shortcuts import render, reverse
 from django.views.generic.detail import DetailView
 from django.views.generic import ListView
@@ -19,3 +19,7 @@ class ProfileUpdate(UpdateView):
 
     def get_success_url(self):
         return reverse('profile-detail', kwargs={'slug' : self.object.user.username})
+
+class ProposalList(ListView):
+    model = Proposal
+    context_object_name = "proposals"

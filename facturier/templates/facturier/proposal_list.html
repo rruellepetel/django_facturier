@@ -6,7 +6,7 @@
 
 <ul>
 {% for proposal in proposals %}
-<li><a href="{% url 'proposal_summary' %}">{{proposal.status.status}} {{proposal.owner.username}} {{proposal.client.last_name}}</a></li>
+<li>{{proposal.status.status}} {{proposal.dealer.username}} {{proposal.customer.first_name}} {{proposal.customer.last_name}}</a></li>
 {% endfor %}
 </ul>
 
