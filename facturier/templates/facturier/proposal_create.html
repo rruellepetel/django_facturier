@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Proposal{% endblock title %}
+
+{% block content %}
+<form class="" action="{% url 'create_proposal' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ view.line.as_p }}
+    <input type="submit" name="" value="Create">
+</form>
+{% endblock %}

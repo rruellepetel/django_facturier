@@ -46,7 +46,7 @@ class Proposal(models.Model):
         return result
 
     def __unicode__(self):
-        return self.Proposal_name
+        return self.Proposal_name+" "+ str(self.id)
 
 
 class Service(models.Model):

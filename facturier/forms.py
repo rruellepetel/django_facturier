@@ -1,4 +1,4 @@
 from django.forms import inlineformset_factory
 from .models import *
 
-lineFormSet = inlineformset_factory(Project, Project_line, fields=['label', 'quantity', 'unit_price'] , extra=1)
+ProposalInlineFormSet = inlineformset_factory(Proposal,Service, fields="__all__")
