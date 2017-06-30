@@ -4,6 +4,7 @@
 
 {% block content %}
 <form class="" action="{% url 'create_proposal' %}" method="post" enctype="multipart/form-data">
+    {{ view.line.management_form }}
     {% csrf_token %}
     {{ form.as_p }}
     {{ view.line.as_p }}
