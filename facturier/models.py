@@ -39,6 +39,12 @@ class Proposal(models.Model):
 
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
+    def amount(self):
+        result = 0
+        for service in self.service_set.all():
+                result += service.unit_price * service.quantity
+        return result
+
     def __unicode__(self):
         return self.Proposal_name
 

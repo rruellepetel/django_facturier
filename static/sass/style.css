@@ -5817,4 +5817,11 @@ button.close {
 body {
   background-color: lightgreen; }
 
+th {
+  text-align: center;
+  background-color: lightyellow; }
+
+td {
+  background-color: lightgrey; }
+
 /*# sourceMappingURL=../../../../../../../../../static/sass/style.css.map */

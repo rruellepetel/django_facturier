@@ -4,10 +4,30 @@
 
 <h2>Proposal List</h2>
 
-<ul>
-{% for proposal in proposals %}
-<li>{{proposal.status.status}} {{proposal.dealer.username}} {{proposal.customer.first_name}} {{proposal.customer.last_name}}</a></li>
-{% endfor %}
-</ul>
+<div class="panel panel-default">
+   <table class="table">
+       <thead>
+           <tr>
+               <th>Dealer</th>
+               <th>First Name</th>
+               <th>Last Name</th>
+               <th>Status</th>
+               <th>Amount</th>
+           </tr>
+       </thead>
+       <thbody>
+           {% for proposal in proposals %}
+           <tr>
+               <td>{{proposal.dealer.username}}</td>
+               <td>{{proposal.customer.first_name}}</td>
+               <td>{{proposal.customer.last_name}}</td>
+               <td>{{proposal.status.status}}</td>
+               <td>{{proposal.amount}}</td>
+           </tr>
+           {% endfor %}
+       </thbody>
+   </table>
+</div>
+
 
 {% endblock %}

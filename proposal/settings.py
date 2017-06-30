@@ -128,8 +128,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
 STATICFILES_FINDERS = [
 
    'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -168,3 +166,10 @@ AUTHENTICATION_BACKENDS = (
     )
 
 SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"proposal", "static"),
+    os.path.join(BASE_DIR,"static"),
+]
