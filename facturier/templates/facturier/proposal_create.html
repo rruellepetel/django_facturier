@@ -1,13 +1,29 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Create Proposal{% endblock title %}
 
 {% block content %}
-<form class="" action="{% url 'create_proposal' %}" method="post" enctype="multipart/form-data">
-    {{ view.line.management_form }}
+<form id="the_form" action="{% url 'create_proposal' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    {{ view.line.as_p }}
+    <hr>
+    {{ view.line.management_form }}
+    {% for inline_form in view.line %}
+       <div class="plop">
+            {{inline_form.as_p}}
+       </div>
+   {% endfor %}
     <input type="submit" name="" value="Create">
 </form>
 {% endblock %}
+{% block extra_scripts %}
+<script src="{% static 'jquery.formset.js' %}" type="text/javascript"></script>
+<script type="text/javascript">
+   $(function() {
+      $('#the_form .plop').formset({
+           prefix: '{{ view.line.prefix }}'
+      });
+   })
+</script>
+ {% endblock extra_scripts %}

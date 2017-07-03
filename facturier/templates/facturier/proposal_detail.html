@@ -2,16 +2,19 @@
 
 {% block content %}
 
-<h2>Proposal Number: {{proposal.id}}</h2>
+<h1>Proposal Number: {{proposal.id}}</h1>
+
+{% for service in view.services %}
+
+<h2>Service Delivered: {{service.service_name}}</h2>
+{% endfor %}
+
+<h3>Price : {{proposal.amount}}</h3>
+
+<h3>Client: {{proposal.customer.first_name}} {{proposal.customer.last_name}}</h3>
 
 <h3>Status: {{proposal.status.status}}</h3>
 
 <h3>Employee: {{proposal.dealer.username}}</h3>
-
-<h3>Client: {{proposal.customer.first_name}} {{proposal.customer.last_name}}</h3>
-
-{% for service in view.services %}
-<h4>Service Delivered: {{service.service_name}}</h4>
-{% endfor %}
 
 {% endblock %}
