@@ -13,6 +13,6 @@ td {
     background-color: lightgrey;
 }
 
-.row h1 {
+.col-md-12 > h1:nth-child(1) {
     font-weight: bold;
 }
