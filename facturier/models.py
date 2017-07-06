@@ -33,7 +33,7 @@ class Proposal(models.Model):
 
     Proposal_name = models.CharField(max_length=100)
 
-    dealer = models.ForeignKey(User, on_delete=models.CASCADE)
+    dealer = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user")
 
     status = models.ForeignKey(Status, on_delete=models.CASCADE)
 

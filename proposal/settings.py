@@ -173,3 +173,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"proposal", "static"),
     os.path.join(BASE_DIR,"static"),
 ]
+
+SASS_PROCESSOR_ENABLED = True

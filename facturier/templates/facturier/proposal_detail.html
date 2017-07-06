@@ -2,7 +2,12 @@
 
 {% block content %}
 
-<h1>Proposal Number: {{proposal.id}}</h1>
+<a href="{% url 'proposal_update' proposal.id %}"><h3>Edit</h3></a>
+<a href="{% url 'proposal_validate' proposal.id %}"><h3>Change Status</h3></a>
+<a href="{% url 'proposal_archive' proposal.id %}"><h3>Archive</h3></a>
+
+
+<h1 class="proposal">Proposal Number: {{proposal.id}}</h1>
 
 {% for service in view.services %}
 
@@ -15,6 +20,6 @@
 
 <h3>Status: {{proposal.status.status}}</h3>
 
-<h3>Employee: {{proposal.dealer.username}}</h3>
+<h3>Dealer: {{proposal.dealer.username}}</h3>
 
 {% endblock %}

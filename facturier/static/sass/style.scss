@@ -1,18 +1,3 @@
-@import "bootstrap";
-
-body {
-    background-color: lightgreen;
-}
-
-th {
-    text-align: center;
-    background-color: lightyellow;
-}
-
-td {
-    background-color: lightgrey;
-}
-
-.col-md-12 > h1:nth-child(1) {
-    font-weight: bold;
+h1 {
+    color: red;
 }
