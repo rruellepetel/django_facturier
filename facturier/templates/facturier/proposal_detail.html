@@ -2,11 +2,6 @@
 
 {% block content %}
 
-<a href="{% url 'proposal_update' proposal.id %}"><h3>Edit</h3></a>
-<a href="{% url 'proposal_validate' proposal.id %}"><h3>Change Status</h3></a>
-<a href="{% url 'proposal_archive' proposal.id %}"><h3>Archive</h3></a>
-
-
 <h1 class="proposal">Proposal Number: {{proposal.id}}</h1>
 
 {% for service in view.services %}
@@ -14,12 +9,18 @@
 <h2>Service Delivered: {{service.service_name}}</h2>
 {% endfor %}
 
-<h3>Price : {{proposal.amount}}</h3>
+<h3>Price : {{proposal.amount}}€</h3>
 
 <h3>Client: {{proposal.customer.first_name}} {{proposal.customer.last_name}}</h3>
 
 <h3>Status: {{proposal.status.status}}</h3>
 
 <h3>Dealer: {{proposal.dealer.username}}</h3>
+
+
+<a href="{% url 'proposal_update' proposal.id %}" class="btn btn-warning"><span>Edit</span></a>
+<a href="{% url 'proposal_validate' proposal.id %}" class="btn btn-primary"><span>Change Status</span></a>
+<a href="{% url 'proposal_archive' proposal.id %}" class="btn btn-success"><span>Archive</span></a>
+
 
 {% endblock %}

@@ -13,12 +13,24 @@ th {
 td {
     background-color: lightyellow;
     font-style: italic;
-}
-
-.navbar-brand {
-    background-color: lightblue;
+    color: purple;
 }
 
 .container-fluid {
     background-color: lightblue;
+
+}
+
+h2 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+h1 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    color: red;
 }

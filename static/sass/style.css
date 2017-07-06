@@ -5824,15 +5824,21 @@ th {
 
 td {
   background-color: lightyellow;
-  font-style: italic; }
-
-.navbar-brand {
-  background-color: lightblue; }
+  font-style: italic;
+  color: purple; }
 
 .container-fluid {
   background-color: lightblue; }
 
-li .active {
-  background-color: lightblue; }
+h2 {
+  text-decoration: underline;
+  font-weight: bold; }
+
+h1 {
+  text-decoration: underline;
+  font-weight: bold; }
+
+.navbar-nav {
+  color: red; }
 
 /*# sourceMappingURL=../../../../../../../../../static/sass/style.css.map */
