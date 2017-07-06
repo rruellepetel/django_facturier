@@ -4,7 +4,7 @@
 {% block title %}Update Proposal{% endblock title %}
 
 {% block content %}
-<form id="the_form" action="{% url 'create_proposal' %}" method="post" enctype="multipart/form-data">
+<form id="the_form" action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <hr>

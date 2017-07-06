@@ -1,3 +1,24 @@
-h1 {
-    color: red;
+@import 'bootstrap';
+
+body {
+    background-color: lightgreen;
+}
+
+th {
+    background-color: lightgrey;
+    text-align: center;
+    font-weight: bold;
+}
+
+td {
+    background-color: lightyellow;
+    font-style: italic;
+}
+
+.navbar-brand {
+    background-color: lightblue;
+}
+
+.container-fluid {
+    background-color: lightblue;
 }

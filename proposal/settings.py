@@ -140,6 +140,8 @@ STATICFILES_FINDERS = [
 
 ]
 
+SASS_PROCESSOR_ROOT = "static/"
+
 BOWER_INSTALLED_APPS = (
 
    'jquery',
@@ -173,5 +175,3 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"proposal", "static"),
     os.path.join(BASE_DIR,"static"),
 ]
-
-SASS_PROCESSOR_ENABLED = True

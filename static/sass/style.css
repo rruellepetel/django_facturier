@@ -5818,10 +5818,21 @@ body {
   background-color: lightgreen; }
 
 th {
+  background-color: lightgrey;
   text-align: center;
-  background-color: lightyellow; }
+  font-weight: bold; }
 
 td {
-  background-color: lightgrey; }
+  background-color: lightyellow;
+  font-style: italic; }
+
+.navbar-brand {
+  background-color: lightblue; }
+
+.container-fluid {
+  background-color: lightblue; }
+
+li .active {
+  background-color: lightblue; }
 
 /*# sourceMappingURL=../../../../../../../../../static/sass/style.css.map */
