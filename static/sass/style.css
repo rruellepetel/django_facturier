@@ -5820,7 +5820,8 @@ body {
 th {
   background-color: lightgrey;
   text-align: center;
-  font-weight: bold; }
+  font-weight: bold;
+  color: green; }
 
 td {
   background-color: lightyellow;
@@ -5838,7 +5839,10 @@ h1 {
   text-decoration: underline;
   font-weight: bold; }
 
-.navbar-nav {
-  color: red; }
+ul.nav.navbar-nav li a {
+  color: purple; }
+
+div.navbar-header a.navbar-brand {
+  color: purple; }
 
 /*# sourceMappingURL=../../../../../../../../../static/sass/style.css.map */

@@ -8,6 +8,7 @@ th {
     background-color: lightgrey;
     text-align: center;
     font-weight: bold;
+    color: green;
 }
 
 td {
@@ -31,6 +32,10 @@ h1 {
     font-weight: bold;
 }
 
-.navbar-nav {
-    color: red;
+ul.nav.navbar-nav li a {
+    color: purple;
+}
+
+ div.navbar-header a.navbar-brand{
+    color: purple;
 }
