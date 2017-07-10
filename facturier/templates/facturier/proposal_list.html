@@ -18,11 +18,12 @@
        <thbody>
            {% for proposal in proposals %}
            <tr>
-               <td><a href="{%url 'proposal_details' proposal.id %}">{{proposal.dealer.username}}</a> </td>
+               <td><a href="{%url 'proposal_details' proposal.id %}">{{proposal.dealer.username}}</a></td>
                <td>{{proposal.customer.first_name}}</td>
                <td>{{proposal.customer.last_name}}</td>
                <td>{{proposal.status.status}}</td>
                <td>{{proposal.amount}}€</td>
+
           </tr>
            {% endfor %}
        </thbody>
