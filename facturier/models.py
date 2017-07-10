@@ -39,6 +39,10 @@ class Proposal(models.Model):
 
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
+    creation_date = models.DateTimeField(blank=True, null=True)
+
+    update_date = models.DateTimeField(blank=True, null=True)
+
     def amount(self):
         result = 0
         for service in self.service_set.all():
