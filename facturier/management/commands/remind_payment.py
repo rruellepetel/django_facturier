@@ -38,3 +38,23 @@ class Command(BaseCommand):
                         fail_silently=False,
 
                     )
+
+            elif proposition.status == pending:
+
+                pending_proposal = proposition.creation_date
+
+                if pending_proposal <= now_1_month:
+
+                    send_mail(
+
+                        'Hello',
+
+                        'Do you remind us ? ',
+
+                        'lelel@example.com',
+
+                        ['lelel@example.com'],
+
+                        fail_silently=False,
+
+                    )
