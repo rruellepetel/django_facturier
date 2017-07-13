@@ -16,6 +16,7 @@ class Command(BaseCommand):
         #            print row
 
         project = []
+        create_project = None
 
 
         with open('export_facturier.csv', 'rb') as csvfile:
@@ -53,7 +54,7 @@ class Command(BaseCommand):
                     if update_date != '':
                         up_date = pytz.utc.localize(datetime.strptime(update_date, '%d/%m/%y %H:%M'))
 
-                    proposal = Proposal.objects.create(
+                    proposal,create_project = Proposal.objects.get_or_create(
                         Proposal_name=id,
                         dealer=User.objects.get(id=1),
                         status=status_object,
@@ -62,7 +63,7 @@ class Command(BaseCommand):
                         update_date=up_date
                     )
 
-                Service.objects.create(
+                Service.objects.get_or_create(
                     service_name=product,
                     unit_price=price,
                     quantity=qty,
